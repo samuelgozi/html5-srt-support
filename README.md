@@ -28,13 +28,13 @@ NOTE: Im using CommonJS modules, but if you wish to change it, it is very easy, 
 let videoElement = document.getElementsByTagName('video')[0];
 ```
 
-2: Import and pass it the video element
+2: Import the module and pass it the Video Element.
 ```javascript
 let videoElement = document.getElementsByTagName('video')[0],
     srtSupport = require('srtsupport')(videoElement);
 ```
 ***Important note:*** This is an Asynchronous process, so if you want to preform an action after its done, you can pass
-a callback as the second argument, however, this is optional.
+a callback as the second argument, however it is optional.
 
 3: Initialize it.
 ```javascript
@@ -49,7 +49,7 @@ Thats all, three lines.
 ### With callback
 ```javascript
 let videoElement = document.getElementsByTagName('video')[0],
-    srtSupport = require('srtsupport')(videoElement function() {
+    srtSupport = require('srtsupport')(videoElement, function() {
         // Callback function
     });
 
